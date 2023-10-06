@@ -4,7 +4,7 @@ set -o errexit
 
 pip install -r requirements.txt
 
-[[ $CREATE_SUPERUSER ]];
+if [[ $CREATE_SUPERUSER ]];
 then
   python rendertasks/manage.py createsuperuser --no-input
 fi
